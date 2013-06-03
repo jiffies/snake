@@ -266,7 +266,6 @@
       initGame: function($drawTarget) {
         var paramsFood;
         $(document).keydown(function(e) {
-          console.log(e.which);
           return snake.setDir(e.which);
         });
         sTimer = setInterval(function() {
@@ -341,7 +340,7 @@
         divs = $("#draw-target").children();
         for (_i = 0, _len = divs.length; _i < _len; _i++) {
           div = divs[_i];
-          div.remove();
+          $(div).remove();
         }
         return init();
       }

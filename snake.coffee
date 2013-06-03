@@ -167,7 +167,7 @@ Game = (snake,food,params)->
 		return {
 			initGame: ($drawTarget)->
 				$(document).keydown (e)->
-					console.log e.which
+					#console.log e.which
 					snake.setDir e.which	
 				sTimer = setInterval ->
 					if GameOver
@@ -236,7 +236,7 @@ $(document).ready ->
 		
 		if GameOver
 			divs = $("#draw-target").children()
-			div.remove() for div in divs
+			$(div).remove() for div in divs
 			init()
 	
 	###
