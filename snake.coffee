@@ -76,7 +76,7 @@ Snake = ->
 		
 			
 		setDir: (dir)->
-			sDir = dir unless sDir - dir is 2 or sDir-dir is -2
+			sDir = dir unless sDir - dir is 2 or sDir-dir is -2 or dir is 18 or dir is 9
 		isSnake: (x,y)->
 			return true for snode in sBody when snode.x is x and snode.y is y
 			false
@@ -153,8 +153,8 @@ Food = (snake)->
 			x = (Math.floor Math.random()*51)*10
 			y = (Math.floor Math.random()*51)*10
 			while !canFood(x,y)
-				x = Math.floor Math.random()*51
-				y = Math.floor Math.random()*51
+				x = (Math.floor Math.random()*51)*10
+				y = (Math.floor Math.random()*51)*10
 			[params.x,params.y] = [x,y]
 			food = DHTMLDraw.drawRect params
 			[food.x,food.y] = [x,y]

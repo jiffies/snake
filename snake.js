@@ -136,7 +136,7 @@
         return sHead = sBody[0], sTail = sBody[1], sBody;
       },
       setDir: function(dir) {
-        if (!(sDir - dir === 2 || sDir - dir === -2)) {
+        if (!(sDir - dir === 2 || sDir - dir === -2 || dir === 18 || dir === 9)) {
           return sDir = dir;
         }
       },
@@ -250,8 +250,8 @@
         x = (Math.floor(Math.random() * 51)) * 10;
         y = (Math.floor(Math.random() * 51)) * 10;
         while (!canFood(x, y)) {
-          x = Math.floor(Math.random() * 51);
-          y = Math.floor(Math.random() * 51);
+          x = (Math.floor(Math.random() * 51)) * 10;
+          y = (Math.floor(Math.random() * 51)) * 10;
         }
         _ref = [x, y], params.x = _ref[0], params.y = _ref[1];
         food = DHTMLDraw.drawRect(params);
