@@ -179,6 +179,8 @@ Game = (snake,food,params)->
 							
 							init()
 							return
+						else
+							return
 						
 
 					snake.move(food)

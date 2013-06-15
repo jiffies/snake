@@ -277,6 +277,8 @@
               food.reset();
               init();
               return;
+            } else {
+              return;
             }
           }
           return snake.move(food);
